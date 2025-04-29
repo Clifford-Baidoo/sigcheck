@@ -28,7 +28,7 @@ export default function Navbar(){
                 <Link to="/">Home</Link>
                 <Link to="/dashboard">Dashboard</Link>
                 <a href="">About</a>
-                <a href="">Login</a>
+                <Link to="/signin">Login</Link>
             </div>
             <div className="navbar-menu-container">
                 <AiOutlineUnorderedList onClick={() => SetOpenMenu(true)}/>

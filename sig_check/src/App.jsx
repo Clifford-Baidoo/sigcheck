@@ -2,7 +2,8 @@ import './Out.css';
 import Home from './components/Home.jsx';
 import Footer from './components/Footer.jsx';
 import Navbar from './components/Navbar.jsx';
-import Dashboard from './components/Dashboard.jsx'
+import Dashboard from './components/Dashboard.jsx';
+import SignIn from './components/SignIn.jsx';
 import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/signin" element={<SignIn />} /> 
         </Routes>
       </div>
       <Footer />
