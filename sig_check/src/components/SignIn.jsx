@@ -1,4 +1,4 @@
-import { Box, Stack ,FieldRoot, FieldLabel, Input, Button,Heading } from "@chakra-ui/react";
+import { Box, Stack ,FieldRoot, FieldLabel, Input, Button,Heading,Link } from "@chakra-ui/react";
 import { PasswordInput } from "./ui/password-input";
 
 export default function SignIn(){
@@ -18,6 +18,9 @@ export default function SignIn(){
                     <Button>
                         Sign In
                     </Button>
+                    <Box>
+                    <Link to="/signup">Don't have an account?</Link>
+                    </Box>
                 </Stack>
             </Box>
         </Box>

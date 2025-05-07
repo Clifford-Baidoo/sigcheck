@@ -1,0 +1,265 @@
+Delivered-To: baidooclifford56@gmail.com
+Received: by 2002:a05:7022:aaa:b0:9a:563:fb53 with SMTP id dd42csp3502656dlb;
+        Wed, 7 May 2025 01:00:37 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IE4uWQkV/e13cuB2ibMVbiuNZZcXo6IE1jjHX1DvzThRgpbpb6uYInXwpynvVJ1Qr/jEgOy
+X-Received: by 2002:a05:6602:1486:b0:85a:fe80:cdd1 with SMTP id ca18e2360f4ac-8674703d4e3mr91725039f.0.1746604837007;
+        Wed, 07 May 2025 01:00:37 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1746604836; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=bVekyFjWw5Hn+1kOxv6V2xtX1IMtopmkHOJtxmKQLpKOlPRdn6DccXTCpmXdUTM3Ab
+         rJrkT/lEyFUK8dmGnx0KNCnpuY1nwZp3o956bJ5EtZWUjqSA35vyz6KSu1QzyaH5SH+T
+         HIjgHVXaxmQp2paBD8pRwdd/1+cqMjCX9K9GTfQRklQ2T66JZATbZxNx5VhSFaDduxEv
+         NZAyDjf085TI97w6ihKk4Q2+Up6NfZw24GaVCPmA59Pzewc5OHKBTPIiVl/9HJNLyd1J
+         kF7JiL4LjHE60SECVtMmn5mVa1cvFn8pGT+8g7hmVbu9TncMCPXJ7//5ic1OJebcJ0sQ
+         q1tA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=j4+bbPBwh504itXTu2Zgw+jGjQTK1m50UuWSpHJ3T64=;
+        fh=GKa6EBpcQ9XH2XmW464aiPWtV/8xKBLQ4vIflIezhv0=;
+        b=ErSv5jwWOZNTG1wg/CgZUVMDXKQMy8ZWEf3PbZrXGV0V5DJgl9mqjhKtGHpiynV1Vx
+         Lq3JksXCu9i1tun4Tl2Y6Ji4Xf/1OAf6mE/XU2TWnF5YkFFsQazN+/CF28ir56yzL3OJ
+         Vmj86WxKT9uNn7fRmlAeXDec3tzKGMdTO6JcfIXtgDpe7nkC+ya2+fttbmklwLNoz5MH
+         OBLJXZuo2Fb4Ptc8dmDZ1+tyRuuehP2S/wUxVtB/McfApMJJxz+Zt5dZV8IKtq64j00M
+         f30/QQf1NDvIp01691Mu39sVkTzaxYsYu7/pitb+6Zn4S74JQLa27l6Cc5wXA6ww8+qE
+         ET4A==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@calbank.net header.s=selector2 header.b=Wh8YvKO8;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of noreply@calbank.net designates 2a01:111:f403:c200::4 as permitted sender) smtp.mailfrom=noreply@calbank.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=calbank.net
+Return-Path: <noreply@calbank.net>
+Received: from DUZPR83CU001.outbound.protection.outlook.com (mail-northeuropeazlp170130004.outbound.protection.outlook.com. [2a01:111:f403:c200::4])
+        by mx.google.com with ESMTPS id ca18e2360f4ac-864b0bb2116si1206973339f.100.2025.05.07.01.00.36
+        for <BAIDOOCLIFFORD56@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 07 May 2025 01:00:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@calbank.net designates 2a01:111:f403:c200::4 as permitted sender) client-ip=2a01:111:f403:c200::4;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@calbank.net header.s=selector2 header.b=Wh8YvKO8;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of noreply@calbank.net designates 2a01:111:f403:c200::4 as permitted sender) smtp.mailfrom=noreply@calbank.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=calbank.net
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=fo9oYN7HpFbha62vZ8pSuqa6gjYFX8Qq+Kqmw/XgE700PrRqsgLWZRTVvCJnyyGJUzKTbqzTrpfGd3bN7IIMZlrx0lZ/q/HPTA4NY+1kixBCCH/1Wku1pMdgX8nQkzEjl9oHSmd1lLJ3iD7bBcsdisWEBamaSGekIyzPTtr17Z4hQRYPnCn0fCYDQPp+GigkPwdbYXpygSVRve95b4bFgKknyBr8d3EZ2SJM5bdK6cF9F+iXg3p7Nhtm89MWOpjeCEct53LkpvezPyqY/nQWMBvQ+uIbwfV4eyatPrd2Bo/GimZ5JSkyQWSdEshaDiu+LMGgvRFfPmFDJlKBV4vilQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=j4+bbPBwh504itXTu2Zgw+jGjQTK1m50UuWSpHJ3T64=;
+ b=WKmIMX47sFvrHNciRUyihOQmP6GtXQu9zfnln46FyFZDhbharnx3Oiu3M7tqlkwhhUx5wdw2nuDadhRuo+g2ce4A710MWNzvfMI9YI4N1DfgFlAmadx/ajBQQEhJh1ckQycKP7fiofNIWpOtad6apAPB/xdhETKKYfUIpB2PoDUhxBWI3aU2mRnLWAJUvgpwQYzCUr9d67m0M7uQ2paeRLGV2ay2YnFTXBXGnjj2FSgzhB964O0cgk48JSdS+AsOKkswDw7eP7Lh9N7i0vIfunJB1y5rh+YYCOVGEZ5SqQTaRjhBB58I8C/mXJ3eZty6cDZqd+igBf25OLf63ucg4Q==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=fail (sender ip is
+ 45.222.204.22) smtp.rcpttodomain=gmail.com smtp.mailfrom=calbank.net;
+ dmarc=fail (p=reject sp=reject pct=100) action=oreject
+ header.from=calbank.net; dkim=none (message not signed); arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=calbank.net;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=j4+bbPBwh504itXTu2Zgw+jGjQTK1m50UuWSpHJ3T64=;
+ b=Wh8YvKO8b5TcFnSy0MoNY0Y3LW3tP8//Uuw0bJwPE1jB3m6rHVc7zugsEVakFr6++1DN+iXg++WPbCNJ3pnq2i0BEc8SSrN2pNLZMhFiEXxJReaKTNoZ9otoRjTUJRFdQaO0P2t1C5t+HsZ2PVMEfqiQ4PiZUQMl2vDPCGP1EikW1Zqx45BiZeSFA1YdiMLPhdmWpkWlkiGbHs81Y4x5i6WJlabjBCMMrTNpOJOlFDWUYb8AitmsOXDyrA5w/3q/A56NAGhpkjgDxEiNVRs36OTBH9SPlJk6vr6jLWE7MqOPYjQj8jwMxAtvHwheGM+aj9WNkfjDUvThiFKueSgAtw==
+Received: from AS4P195CA0011.EURP195.PROD.OUTLOOK.COM (2603:10a6:20b:5e2::15)
+ by AM0PR04MB6995.eurprd04.prod.outlook.com (2603:10a6:208:18e::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8722.20; Wed, 7 May
+ 2025 08:00:33 +0000
+Received: from AM1PEPF000252DE.eurprd07.prod.outlook.com
+ (2603:10a6:20b:5e2:cafe::37) by AS4P195CA0011.outlook.office365.com
+ (2603:10a6:20b:5e2::15) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8722.21 via Frontend Transport; Wed,
+ 7 May 2025 08:00:33 +0000
+X-MS-Exchange-Authentication-Results: spf=fail (sender IP is 45.222.204.22)
+ smtp.mailfrom=calbank.net; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=oreject header.from=calbank.net;
+Received-SPF: Fail (protection.outlook.com: domain of calbank.net does not
+ designate 45.222.204.22 as permitted sender) receiver=protection.outlook.com;
+ client-ip=45.222.204.22; helo=HQL-BULKSMTP-365.calbankgh.com;
+Received: from HQL-BULKSMTP-365.calbankgh.com (45.222.204.22) by
+ AM1PEPF000252DE.mail.protection.outlook.com (10.167.16.56) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8722.18
+ via Frontend Transport; Wed, 7 May 2025 08:00:33 +0000
+Date: Wed, 7 May 2025 08:00:31 +0000 (UTC)
+From: noreply@calbank.net
+To: BAIDOOCLIFFORD56@GMAIL.COM
+Message-ID: <2100590869.478905.1746604831122.JavaMail.Administrator@t24corban-01>
+Subject: Transaction Alert - CalBank
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_478903_1967258829.1746604831122"
+Return-Path: noreply@calbank.net
+X-EOPAttributedMessage: 0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: AM1PEPF000252DE:EE_|AM0PR04MB6995:EE_
+X-MS-Office365-Filtering-Correlation-Id: ca6014c3-9cdb-475c-5846-08dd8d3d3e5c
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|1032899013|82310400026|376014|69100299015|1800799024|36860700013|2066899003|8096899003|13003099007;
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ckRNQjRHdjh1T2dBWUJQc3puQzRQbStwQU1HbUdUVVpIcXVPK2ZyVlJOajk5?=
+ =?utf-8?B?V2pSSTl1NkthcW1rd1k5a201WFlvVU8zVXg2bEVId0M3Tk1ub3dsYlU5aCs1?=
+ =?utf-8?B?M1l5eGtrRytvMVZLODB4Q2hOR2V1Z2R5Q24zTFBPdzZJc09VTzF3c2FIb0pn?=
+ =?utf-8?B?V2lPcGpxSFdsekZrWjUrblZzVUVCUW1VcFRmUkd5M1ZVNEFja2dIUDh0TFdw?=
+ =?utf-8?B?dGhXdS90MmM3VU5NcXRPMXZ6UlZjdXdjbERJckdRY1kyZEdVSmVpSG5Ca1I2?=
+ =?utf-8?B?RlNpbGJ5d3J6TGhoY240b0tHdTRVa2JjdEN1cDFYQ0RYYlFRaHZ1SWc3eFdk?=
+ =?utf-8?B?VFpCUHM0Umg0dldxb2tESUFuNjRiT21uYzFUbHFaU2h6dzhmVGhCOUx3dll0?=
+ =?utf-8?B?K2QxRzRhUXpOQWpnYW5aZTU3eU15bnNGYmFsTENPUHJQaTRNYk5IVllnbVFx?=
+ =?utf-8?B?cFJYUmNETFVwRnU0Y2phTCtSYlFXb3ZYcXZWcmxVVnZDR3ErS0hHcGhQYjBr?=
+ =?utf-8?B?S2NscURlYlZJZDFHNkNhcys3U3dTQnVONVVsWUlYQ0lKQTEzSVVabTlHajBj?=
+ =?utf-8?B?am5sWnR6TWhMaVlFQ1MvRXpPdTF1QlBKeUh6MEt3ZVlPb0ZsRlJhR0RlUXF4?=
+ =?utf-8?B?VHhidVRZQjRyWXUvbFZWenNNbWlaWG5sY3ZwclNOZE0xY0NlNFNaWG9LVVk5?=
+ =?utf-8?B?S2xrTzErUGk0OTVxcWw3UHUzUGZ3TjF2aDF5ODM2YkJyZ2ZhR1g2NDR1c1Jt?=
+ =?utf-8?B?NjRVSWVBcEt1NTJvNkxHbHFtY2pQb2o5MXpWbkNwZ3B2Y0dRaFJjVG9rMDRS?=
+ =?utf-8?B?V0daS2pBNG5maXJRVThYK1FKNDZXQ1NSanJwdHlncmVzaC96TUU2eEZhZ0pw?=
+ =?utf-8?B?dTNsOGpRZDI4Qnh5TDdNT1VwdUtCZ1NKdmJuQi95Q2UxZzFsRW82bUpMY2Z5?=
+ =?utf-8?B?QTV3cHYxR3pVWWw1bjFpbWxTN044dlZNenpNTFQxV3Q4YUVocE1hQWlRc3Jx?=
+ =?utf-8?B?eC9jemRRc2x5aGMyb3ErTnp6MzF2MFdOM1E5M3lwekxDUGdzbEFhdndWalp4?=
+ =?utf-8?B?djFkK0Rac3lqWGpFT3R3K0xFMktUQkV2NklRdDg4MXo0SXBpY2JNZGFMSUI5?=
+ =?utf-8?B?M2dQZ2VqYXlPSk5uRnhJRGl5QlE4czg5NmxnN3V0ZnV3UXhiT3pzMFg5OEZP?=
+ =?utf-8?B?Q0VweTA5TkJ1bGRFQ3QrV0xjejJsYmUwNjJHS0VwYlNLa1l2d2pWRGRSQmly?=
+ =?utf-8?B?N0Jzc0tWK21SbGpGd2tZQVlwNE9Lcjc1alVTOW1EMWxwM0x5RFVwckFSZUpY?=
+ =?utf-8?B?YUt4Yng3QjhHb1RvakFxQXVVNVVsbVd2UmJuTDZUVHRmTm1qb1JzbWYzcnhr?=
+ =?utf-8?B?b0taSk9QdEpOSmFWV01RcDJvTllDREE0cjlUNXlrblVKajYrdy9QVmNQSUxi?=
+ =?utf-8?B?K29yZFF5K0tWTlo0TFloNmp3M1VjMjNPVE9xS1p6TE1PTy9XVkpPazVvUUVB?=
+ =?utf-8?B?Tm1GZzlWM3JlSUtVL1JPeGtwTjBOUmZ3OHk3TVBROGJ5SEt3NURjSVl0Uktt?=
+ =?utf-8?B?U1c0WUJGYS9rcnVTVUVMOGJGUGVsU1lBdHAwR1BWWGtMdXM1YnZXN2JPY3M2?=
+ =?utf-8?B?QlJ0dk4vZnArRkVUUzM4QzBiRUVYdzJJQ29wdGZnQ1JPcno0eWxwK3pJZFBm?=
+ =?utf-8?B?UzZmNkpNYzhYVTJZMW1xOXJ0UGxiZzhDbUNTeUNoRnZpbVRNQ09ZNm5mOE5N?=
+ =?utf-8?B?ai9QNzgzNUE5ZVpSUVNnbDF0MmVwQ0Z4UjdFSFkzUk4yS2c4MzdnRnRZZ1lY?=
+ =?utf-8?B?aUJMN0VHQ3NWOGhTaVVNYUdQTENMSDRpUzBxemgrNjNJcGxsLzgvcHJQL1Jt?=
+ =?utf-8?B?dXlBdmlZRDNLWG5xZ3ZCNHRvN0hZdXVoU2FKOVQweHRlV2Q4azNDQ1B5SndY?=
+ =?utf-8?B?MHFGQ01hc3d5OFgyUXlydEJNSDdRNVdoeEw2MlNDdk8vTCtRRmZJUmVmb2tn?=
+ =?utf-8?B?ZzRXMmNEbEtRPT0=?=
+X-Forefront-Antispam-Report:
+	CIP:45.222.204.22;CTRY:GH;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:HQL-BULKSMTP-365.calbankgh.com;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(1032899013)(82310400026)(376014)(69100299015)(1800799024)(36860700013)(2066899003)(8096899003)(13003099007);DIR:OUT;SFP:1102;
+X-OriginatorOrg: calbank.net
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 May 2025 08:00:33.2683
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ca6014c3-9cdb-475c-5846-08dd8d3d3e5c
+X-MS-Exchange-CrossTenant-Id: 0ca4ed35-1901-404a-9192-581ac44eb1f6
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=0ca4ed35-1901-404a-9192-581ac44eb1f6;Ip=[45.222.204.22];Helo=[HQL-BULKSMTP-365.calbankgh.com]
+X-MS-Exchange-CrossTenant-AuthSource:
+	AM1PEPF000252DE.eurprd07.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM0PR04MB6995
+
+------=_Part_478903_1967258829.1746604831122
+Content-Type: multipart/related; 
+	boundary="----=_Part_478904_320902919.1746604831122"
+
+------=_Part_478904_320902919.1746604831122
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>    <head>        <META http-equiv=3D"Content-Type" content=3D"text/h=
+tml; charset=3DUTF-8">        <title>CalBank Email Notification</title>    =
+    <link href=3D"https://fonts.googleapis.com/css?family=3DTitillium+Web" =
+rel=3D"stylesheet" type=3D"text/css">    </head>    <body style=3D"font-fam=
+ily: 'Titillium Web',sans-serif;">        <span style=3D"font-family: 'Titi=
+llium Web',sans-serif; font-size: 17px; font-weight: 600;">Dear </span><spa=
+n style=3D"font-family: 'Titillium Web',sans-serif; font-size: 17px; font-w=
+eight: 600;">CLIFFORD KINGSLEY BAIDOO</span>,        <br>        <br>      =
+  <span style=3D"font-family: 'Titillium Web',sans-serif; font-size: 15px; =
+font-weight: 500;">Please be informed your account has been <b>debited</b> =
+as below. </span>        <br>        <br>        <br>        <span>        =
+    <table border=3D"1" cellpadding=3D"2" cellspacing=3D"0" width=3D"400px"=
+ style=3D"font-family: 'Titillium Web',sans-serif; font-size: 13px; border-=
+right: darkgrey;       border-left: darkgrey; border-top: darkgrey; border-=
+bottom: darkgrey;">                <tr style=3D"background: #fcde2a; border=
+-bottom: #fcde2a; border-top: #ffffff; border-top-style: solid;">          =
+          <td style=3D"border-left-color: white; border: 1px solid #eae7e7;=
+ border-top: 0px; border-right: white; font-size: 14px;">Account Number: </=
+td><td style=3D"border-left-color: white; border: 1px solid #eae7e7; border=
+-top: 0px; font-size: 14px;">140*******888</td>                </tr>       =
+         <tr style=3D"background: #F8F8F8; border-bottom: #F8F8F8; border-t=
+op: #ffffff; border-top-style: solid;">                    <td style=3D"bor=
+der-left-color: white; border: 1px solid #eae7e7; border-top: 0px; border-r=
+ight: white; font-size: 14px;">Transaction Reference: </td><td style=3D"bor=
+der-left-color: white; border: 1px solid #eae7e7; border-top: 0px; font-siz=
+e: 14px;">FT25127MSX7S</td>                </tr>                <tr style=
+=3D"background: #fcde2a; border-bottom: #fcde2a; border-top: #ffffff; borde=
+r-top-style: solid;">                    <td style=3D"border-left-color: wh=
+ite; border: 1px solid #eae7e7; border-top: 0px; border-right: white; font-=
+size: 14px;">Transaction Date: </td><td style=3D"border-left-color: white; =
+border: 1px solid #eae7e7; border-top: 0px; font-size: 14px;">07 MAY 2025</=
+td>                </tr>                <tr style=3D"background: #F8F8F8; b=
+order-bottom: #F8F8F8; border-top: #ffffff; border-top-style: solid;">     =
+               <td style=3D"border-left-color: white; border: 1px solid #ea=
+e7e7; border-top: 0px; border-right: white; font-size: 14px;">Amount: </td>=
+<td style=3D"border-left-color: white; border: 1px solid #eae7e7; border-to=
+p: 0px; font-size: 14px;">GHS 9.00</td>                </tr>               =
+ <tr style=3D"background: #fcde2a; border-bottom: #fcde2a; border-top: #fff=
+fff; border-top-style: solid;">                    <td style=3D"border-left=
+-color: white; border: 1px solid #eae7e7; border-top: 0px; border-right: wh=
+ite; font-size: 14px;">Exchange Rate: </td><td style=3D"border-left-color: =
+white; border: 1px solid #eae7e7; border-top: 0px; font-size: 14px;">1</td>=
+                </tr>                <tr style=3D"background: #F8F8F8; bord=
+er-bottom: #F8F8F8; border-top: #ffffff; border-top-style: solid;">        =
+            <td style=3D"border-left-color: white; border: 1px solid #eae7e=
+7; border-top: 0px; border-right: white; font-size: 14px;">Description: </t=
+d><td style=3D"border-left-color: white; border: 1px solid #eae7e7; border-=
+top: 0px; font-size: 14px;">Airtime Purchase</td>                </tr>     =
+           <tr style=3D"background: #fcde2a; border-bottom: #fcde2a; border=
+-top: #ffffff; border-top-style: solid;">                    <td style=3D"b=
+order-left-color: white; border: 1px solid #eae7e7; border-top: 0px; border=
+-right: white; font-size: 14px;">Cheque Number: </td><td style=3D"border-le=
+ft-color: white; border: 1px solid #eae7e7; border-top: 0px; font-size: 14p=
+x;"> n/a </td>                </tr>                <tr style=3D"background:=
+ #F8F8F8; border-bottom: #F8F8F8; border-top: #ffffff; border-top-style: so=
+lid;">                    <td style=3D"border-left-color: white; border: 1p=
+x solid #eae7e7; border-top: 0px; border-right: white; font-size: 14px;">Tr=
+ansaction Location: </td><td style=3D"border-left-color: white; border: 1px=
+ solid #eae7e7; border-top: 0px; font-size: 14px;">BNK</td>                =
+</tr>                <tr style=3D"background: #fcde2a; border-bottom: #fcde=
+2a; border-top: #ffffff; border-top-style: solid;">                    <td =
+style=3D"border-left-color: white; border: 1px solid #eae7e7; border-top: 0=
+px; border-right: white; font-size: 14px;">Ledger Balance: </td><td style=
+=3D"border-left-color: white; border: 1px solid #eae7e7; border-top: 0px; f=
+ont-size: 14px;">1,337.23</td>                </tr>                <tr styl=
+e=3D"background: #F8F8F8; border-bottom: #F8F8F8; border-top: #ffffff; bord=
+er-top-style: solid;">                    <td style=3D"border-left-color: w=
+hite; border: 1px solid #eae7e7; border-top: 0px; border-right: white; font=
+-size: 14px;">Available Balance: </td><td style=3D"border-left-color: white=
+; border: 1px solid #eae7e7; border-top: 0px; font-size: 14px; border-botto=
+m-color: #eae7e7;">1,337.23</td>                </tr>            </table>  =
+      </span>        <br>        <br>        <span style=3D"font-family: 'T=
+itillium Web', sans-serif; font-size: 15px; font-weight: 500;">Thank you fo=
+r banking with us.</span>        <br>        <br>        <span style=3D"fon=
+t-family: 'Titillium Web', sans-serif; font-size: 15px; font-weight: 500;">=
+This is an auto-generated email, please do not reply.</span>        <br>   =
+     <br>        <span style=3D"font-family: 'Titillium Web',sans-serif; fo=
+nt-size: 15px; font-weight: 500;">For further enquiries please Call us Toll=
+-free on 0800500500  Email: <a href=3D"mailto:customercare@calbank.net">cus=
+tomercare@calbank.net</a></span>        <br>        <br>        <img src=3D=
+"http://calbank.net/wp-content/themes/calbank/assets/images/logo.png" alt=
+=3D"Logo">        <br>        <span><a href=3D"http://www.calbank.net">http=
+://www.calbank.net </a>            <br>            <br>            <a href=
+=3D"https://www.facebook.com/CALBankLtd" style=3D"margin-left:6px" target=
+=3D"_blank"><img src=3D"http://calbank.net/email-alerts-images/facebook.png=
+" style=3D"width:30px;height:30px;"></a><a href=3D"https://twitter.com/CALB=
+ankLtd" style=3D"margin-left:9px" target=3D"_blank"><img src=3D"http://calb=
+ank.net/email-alerts-images/twitter.png" style=3D"width:30px;height:30px;">=
+</a><a href=3D"http://www.linkedin.com/company/cal-bank-limited" style=3D"m=
+argin-left:9px" target=3D"_blank"><img src=3D"http://calbank.net/email-aler=
+ts-images/linkedin.png" style=3D"width:30px;height:30px;"></a><a href=3D"ht=
+tps://plus.google.com/108355230724726318855" style=3D"margin-left:9px" targ=
+et=3D"_blank"><img src=3D"http://calbank.net/email-alerts-images/google-plu=
+s.png" style=3D"width:30px;height:30px;"></a><a href=3D"https://www.youtube=
+.com/channel/UCzczU8uI8AFTaXfM-2GDhYQ" style=3D"margin-left:9px" target=3D"=
+_blank"><img src=3D"http://calbank.net/email-alerts-images/youtube.png" sty=
+le=3D"width:30px;height:30px;"></a></span>        <br>        <br>        <=
+div class=3D"disclaimer" style=3D"width: 920px; text-align: justify;">     =
+ DISCLAIMER: This email and any attachments are confidential or otherwise p=
+rotected from disclosure and are intended solely for the addressee. If you =
+are not the addressee please contact the sender and delete the email and an=
+y attachment from your system. Do not open, read, copy, disclose, use or st=
+ore it in any way, or permit others to do so. While this email and its atta=
+chment (if any) have been screened by antivirus software, emails may still =
+suffer errors, viruses, delay, interception, and amendments. CalBank PLC, o=
+r its affiliates and subsidiaries, and their agents and privies shall not b=
+e responsible for and do not accept liability for any loss or damage howsoe=
+ver caused by receipt or use of the email.    </div>        <br>        <br=
+>        <a href=3D"http://www.calbank.net" target=3D"_blank"><img src=3D"h=
+ttp://calbank.net/email-alerts-images/footer.jpg"></a>    </body></html>
+------=_Part_478904_320902919.1746604831122--
+
+------=_Part_478903_1967258829.1746604831122--

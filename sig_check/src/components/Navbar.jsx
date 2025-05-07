@@ -27,7 +27,7 @@ export default function Navbar(){
             <div className="navbar-links-container">
                 <Link to="/">Home</Link>
                 <Link to="/dashboard">Dashboard</Link>
-                <a href="">About</a>
+                <Link to='/about'>About</Link>
                 <Link to="/signin">Login</Link>
             </div>
             <div className="navbar-menu-container">
