@@ -176,7 +176,7 @@ body {
   overflow-x: hidden;
 }
 body {
-  background-color: #f6f6f6;
+  background-color: rgba(30, 64, 175, 0.2);
 }
 nav {
   display: flex;

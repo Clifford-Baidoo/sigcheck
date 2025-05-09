@@ -1,23 +1,23 @@
-Message-ID: <dd9e5cb5-0789-4d27-a4cc-38fb4e47d8c9@gmail.com>
-Date: Wed, 7 May 2025 10:48:28 +0000
+X-Mozilla-Status2: 00800000
+Message-ID: <492f419a-731e-4ebb-bcc5-19a5c7b55bc5@gmail.com>
+Date: Fri, 9 May 2025 10:47:17 +0000
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
 Content-Language: en-US
-To: cliffordbaidoo56@gmail.com
+To: takemichihanma715@gmail.com
 From: Clifford Baidoo <baidooclifford56@gmail.com>
-Subject: new maiil
-Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-256; boundary="------------ms080001050000020100060909"
+Subject: Final Test 2
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-256; boundary="------------ms020307010505020008030903"
 
 This is a cryptographically signed message in MIME format.
 
---------------ms080001050000020100060909
+--------------ms020307010505020008030903
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: base64
 
-dmVyaWZpY2F0aW9uIHdpbGwgZ28gdGhyb3VnaCBubyBtYXR0ZXIgdGhlIHdlYXRoZXINCg0K
+VGhpcyBlbWFpbCBpcyBhbHNvIHNpZ25lZA0KDQo=
 
-
---------------ms080001050000020100060909
+--------------ms020307010505020008030903
 Content-Type: application/pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
@@ -91,9 +91,9 @@ qpKKUGicxAGy2zKYEGB0Qo761MccIyclBW9mfuNFDbTBeDEyu80xggTgMIIE3AIBATCBljCB
 gTELMAkGA1UEBhMCSVQxEDAOBgNVBAgMB0JlcmdhbW8xGTAXBgNVBAcMEFBvbnRlIFNhbiBQ
 aWV0cm8xFzAVBgNVBAoMDkFjdGFsaXMgUy5wLkEuMSwwKgYDVQQDDCNBY3RhbGlzIENsaWVu
 dCBBdXRoZW50aWNhdGlvbiBDQSBHMwIQFMh5L+aRY9s1bnaHkzH1yzANBglghkgBZQMEAgEF
-AKCCAxowGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjUwNTA3
-MTA0ODI4WjAvBgkqhkiG9w0BCQQxIgQgLBoUmmuQXlkaDhoUhfSNRtP6j/hVdnG0HubpoHDP
-jRUwgacGCSsGAQQBgjcQBDGBmTCBljCBgTELMAkGA1UEBhMCSVQxEDAOBgNVBAgMB0Jlcmdh
+AKCCAxowGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjUwNTA5
+MTA0NzE3WjAvBgkqhkiG9w0BCQQxIgQgUeAwndhX3sqQSfRnWBJ2I9QhwesFLlSXnJvXjN9R
+Du4wgacGCSsGAQQBgjcQBDGBmTCBljCBgTELMAkGA1UEBhMCSVQxEDAOBgNVBAgMB0Jlcmdh
 bW8xGTAXBgNVBAcMEFBvbnRlIFNhbiBQaWV0cm8xFzAVBgNVBAoMDkFjdGFsaXMgUy5wLkEu
 MSwwKgYDVQQDDCNBY3RhbGlzIENsaWVudCBBdXRoZW50aWNhdGlvbiBDQSBHMwIQFMh5L+aR
 Y9s1bnaHkzH1yzCBqQYLKoZIhvcNAQkQAgsxgZmggZYwgYExCzAJBgNVBAYTAklUMRAwDgYD
@@ -106,10 +106,10 @@ hkgBZQMEAgIwCwYJYIZIAWUDBAIDMAsGCWCGSAFlAwQCBDALBglghkgBZQMEAgcwCwYJYIZI
 AWUDBAIIMAsGCWCGSAFlAwQCCTALBglghkgBZQMEAgowCwYJKoZIhvcNAQEBMAsGCSuBBRCG
 SD8AAjAIBgYrgQQBCwAwCAYGK4EEAQsBMAgGBiuBBAELAjAIBgYrgQQBCwMwCwYJK4EFEIZI
 PwADMAgGBiuBBAEOADAIBgYrgQQBDgEwCAYGK4EEAQ4CMAgGBiuBBAEOAzANBgkqhkiG9w0B
-AQEFAASCAQCZchmGINq80Yw2gbWeK798UmdRqsJT3XUF6TTpDMuF1ChUv9ght3FFUcmoThCi
-loH56pxI46ROtnDlr942ZllcldCRHL23miTwO4PKbA1aJNoN1aNpo8uXO7dcOOoVjjMdEnaN
-Kj9kWANcPHL/fCtZ6HjkuR46hdszxXQvMBLYiCtmB8RiSCZqivsUcFo1zo5yxXyImO4mErPR
-OaMRzkFMIXW8lpHmu4RdGw0C8iOtXtqbTfSx71H5HPIUK0lDroZiFkIZOuWqg8J3HXJicvWo
-+ehkiYEP9aHI8FW5c9g1V8o2nn2H3XTLgIu8KdiyyC6WGiVAmf4Dl6zn1xG93G6GAAAAAAAA
+AQEFAASCAQB38nby4P36g/u7Fs46aVUROCWwT7wGVIGDwkgLZbzAngZw1nJw3Y7Ls54Z+3Z3
+6t2yusbci3ca6uGQv3Jxz2pYlvDcOO5rnm/yOr9fkH9hAe2QRK7tdcJqEeGhX4WkAD5jwF+i
+CI2lWOiFVBjghrLA2BnAlaHXL/t/u/BWvdsxcV+1ze8soR9F86eZV37QAShg0SiklW74VGrb
+cKQSk8lYQuIz5VPs8l7SaVKZHOPSjUL9b94g+TeUs2PZCcniYxw0Voha9KmKqGHNkq5xH2gH
+bpReQOc0Rx1L/duUS/E2Cy4cd1yxc43qPn7dCIpBvZcHE/8Eve+NU//XLYXKEhL/AAAAAAAA
 
---------------ms080001050000020100060909--
+--------------ms020307010505020008030903--

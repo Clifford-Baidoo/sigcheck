@@ -166,7 +166,7 @@ function Dashboard() {
 
   return (
     <div className="p-4 bg-gray-900 text-white min-h-screen">
-      <h1 className="text-2xl font-bold mb-6">Email Verification Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-6"> Verification Dashboard</h1>
       {errorMessage && (
         <div className="mb-4 p-4 bg-red-900 text-red-200 rounded-lg">
           {errorMessage}

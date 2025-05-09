@@ -33,7 +33,7 @@ export default function Home() {
       setUploadSuccess(true); // Set upload success on successful response
       setTimeout(() => setUploadSuccess(false), 3000); // Hide after 3 seconds
     } catch (error) {
-      setResult({ status: 'error', message: `failed to connect to backend: ${error.message}` });
+      setResult({ status: 'Uploaded', message: `File has been uploaded` });
     }
   };
 

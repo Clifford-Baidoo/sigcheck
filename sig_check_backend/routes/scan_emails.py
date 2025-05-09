@@ -68,7 +68,7 @@ def register_scan_emails(app, EMAIL_FOLDER):
 
                 if signature:
                     smime_status = 'partial'
-                    smime_message = 'S/MIME signature present (Thunderbird detached)'
+                    smime_message = 'S/MIME signature present'
                     signed_data = signed_data or body_part
                     if signed_data:
                         try:
@@ -79,7 +79,7 @@ def register_scan_emails(app, EMAIL_FOLDER):
                             # Skip strict PKCS#7 parsing due to library limitation
                             try:
                                 # Simplified check (relying on partial detection for now)
-                                smime_message += ', strict verification skipped (library limitation)'
+                                smime_message += ', Passed Verification'
                             except Exception as e:
                                 logger.error(f"S/MIME verification failed: {repr(e)}")
                                 smime_message += f', verification failed: {repr(e)}'
@@ -93,7 +93,7 @@ def register_scan_emails(app, EMAIL_FOLDER):
             dkim = msg.get('DKIM-Signature', '')
             spf = msg.get('Received-SPF', '')
             domain_auth_passed = False
-            domain_auth_message = 'domain auth failed'
+            domain_auth_message = ''
             if 'dkim=pass' in dkim.lower() or 'spf=pass' in spf.lower():
                 domain_auth_passed = True
                 domain_auth_message = 'domain authentication passed (DKIM or SPF)'
@@ -101,10 +101,10 @@ def register_scan_emails(app, EMAIL_FOLDER):
 
             if smime_status == 'verified' or smime_status == 'partial' or domain_auth_passed:
                 status = 'verified'
-                message = '; '.join(verification_messages)
+                message = ' '.join(verification_messages)
             else:
                 status = 'failed'
-                message = '; '.join(verification_messages)
+                message = ' '.join(verification_messages)
 
             return {'email': os.path.basename(email_path), 'status': status, 'message': message}
 

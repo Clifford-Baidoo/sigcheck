@@ -22,8 +22,7 @@ export default function Footer(){
           <div className="footer-section-columns">
             <span>244-5333-7783</span>
             <span>baidooclifford56@gmail.com</span>
-            <span>press@food.com</span>
-            <span>contact@food.com</span>
+            <span></span>
           </div>
           <div className="footer-section-columns">
             <span>Terms & Conditions</span>

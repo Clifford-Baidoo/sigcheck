@@ -30,6 +30,5 @@ register_get_logs(app)
 register_quarantine(app,EMAIL_FOLDER, QUARANTINE_FOLDER)
 
 
-
 if __name__ == '__main__':
     app.run(debug=True)

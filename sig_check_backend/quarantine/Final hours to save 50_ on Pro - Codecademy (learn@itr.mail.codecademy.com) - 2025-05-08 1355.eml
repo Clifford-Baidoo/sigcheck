@@ -1,0 +1,681 @@
+Delivered-To: baidooclifford56@gmail.com
+Received: by 2002:a05:7022:6992:b0:9a:563:fb53 with SMTP id cj18csp432834dlb;
+        Thu, 8 May 2025 06:55:50 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHM9e4FDDP35MkrfPjbuUBEdDJ2lRq9QLV8iNRSQ4uu0lSID7bnk7RwJu1QebA7V3b2I2ZE
+X-Received: by 2002:a05:622a:1886:b0:471:f08e:d65d with SMTP id d75a77b69052e-49225b38c02mr38596641cf.6.1746712549837;
+        Thu, 08 May 2025 06:55:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1746712549; cv=none;
+        d=google.com; s=arc-20240605;
+        b=l0VZvVMfYleXyrBdDD5EdTt1T1cCJCnIf1BksHQpNb0fq9WHQIyKBekj8XZkAYi5Wm
+         ONL1oFVasSk/pxYnWmDTr2TAf7KXV6yvxoZuuObOEHOpxkZ0O3sGQhjC3Xjp0dG9i0rm
+         ADJVqOEEqYV1fJ/GNYn4/PQ4RE2zuTvg7AP/ZzSMBoGACDFc1+F066fZAM74+NDIW15q
+         y/TaBY7CDjsmT8GPIZDyFy+SfZWKg+I5vtja14vZgRhq7CQDmKOAikWSGBce2cI5g0gw
+         OTV/YGVf05nlk2kLnpMIukroIEHGGzm/c52sd/7FGVQiRV4DbCbdCFPjKsBTr5DYpEER
+         2t8g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:list-unsubscribe:feedback-id:list-unsubscribe-post
+         :reply-to:to:from:subject:mime-version:date:sender:dkim-signature
+         :dkim-signature;
+        bh=tEm3juYqMvq5Rg5aR/zDdJ7VTqeuW6GrSztx/EkrLbU=;
+        fh=+UfMOqTjKUCAtprFGAH1Eh+WeAu4KPy+qcj5TEy7lcY=;
+        b=Bg6BiHxeFtiDD1JlQ7ZKinVHucQ/aZ1OZv3obxop0r7SC3tZOL2ynr3tWMyTer5q5K
+         UBQq431wC2dg6aJOtYr2ZKncP/IsRErZ4VdAyO7fHCxkbGa7IaNuIWgiGuLNpVWM6vOs
+         +TJkD0W8TXv/XqThHztaTK/sIAJU7icbWrtCmjqL4OecxsNYwiRVLpwOuK/y+Gn7hbkL
+         GgCyfWkXBkA9cFofS2KY58UhHhWjtBeDiauM4p1y6tE1aK1Nhsi/shgNSkGvh4/sQeHs
+         D/t0YmQWRC017lnBjeH1Ju08EyKHE6QGN+gYK7fq41y/MYouJdwPWfwz/kaUcRM5648x
+         4LKA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@itr.mail.codecademy.com header.s=smtp header.b="X0/IZwtq";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=BIEoT4js;
+       spf=pass (google.com: domain of bounce+5ea9ba.8dce2a-baidooclifford56=gmail.com@itr.mail.codecademy.com designates 69.72.36.88 as permitted sender) smtp.mailfrom="bounce+5ea9ba.8dce2a-baidooclifford56=gmail.com@itr.mail.codecademy.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=codecademy.com
+Return-Path: <bounce+5ea9ba.8dce2a-baidooclifford56=gmail.com@itr.mail.codecademy.com>
+Received: from m36-88.mailgun.net (m36-88.mailgun.net. [69.72.36.88])
+        by mx.google.com with UTF8SMTPS id 6a1803df08f44-6f6e39e70aasi140136d6.64.2025.05.08.06.55.49
+        for <baidooclifford56@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 08 May 2025 06:55:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+5ea9ba.8dce2a-baidooclifford56=gmail.com@itr.mail.codecademy.com designates 69.72.36.88 as permitted sender) client-ip=69.72.36.88;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@itr.mail.codecademy.com header.s=smtp header.b="X0/IZwtq";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=BIEoT4js;
+       spf=pass (google.com: domain of bounce+5ea9ba.8dce2a-baidooclifford56=gmail.com@itr.mail.codecademy.com designates 69.72.36.88 as permitted sender) smtp.mailfrom="bounce+5ea9ba.8dce2a-baidooclifford56=gmail.com@itr.mail.codecademy.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=codecademy.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=itr.mail.codecademy.com; q=dns/txt; s=smtp; t=1746712549; x=1746719749;
+ h=Message-Id: List-Unsubscribe: X-Feedback-ID: List-Unsubscribe-Post: Reply-To: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=tEm3juYqMvq5Rg5aR/zDdJ7VTqeuW6GrSztx/EkrLbU=;
+ b=X0/IZwtqw5DyQ66R0dE/ILSLPYSdnrnlZMsyD4IkNWp5dBvGklKmOUieSbBJvK+/eIVXZgGaIn1LB0gO4kauJOstThX5CSXxWPZVaVUdvb+X1XD0hVslgz2AbJ6jtw4Scjdgb4EsRaQl7pt6t20ZwsJFWXOokF5M9gRxj6Unj5k=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1746712549; x=1746719749;
+ h=Message-Id: List-Unsubscribe: X-Feedback-ID: List-Unsubscribe-Post: Reply-To: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=tEm3juYqMvq5Rg5aR/zDdJ7VTqeuW6GrSztx/EkrLbU=;
+ b=BIEoT4jsvb/Mt1L83MvhIz1RtTr/IvMrVFS8k0sh90lcWiewmgIXwMQ4v+e1EjLQ88/7OcqMrT6a01CGO5zrlZJb1HnQiFgfoRtP+mmTOiWfyY3fiQwmhV0obuHR16Deo+v9lmwNVvgOBKbdrIeT2WeIY9TJ5KSn0S2sTB6LfJU=
+X-Feedback-Id: learn@itr.mail.codecademy.com::5f46d356f141c6f8191fbaa6:mailgun
+X-Mailgun-Sending-Ip: 69.72.36.88
+X-Mailgun-Sending-Ip-Pool-Name: Codecademy Marketing
+X-Mailgun-Sending-Ip-Pool: 5f4998d723bb9f09b1133f4e
+X-Mailgun-Sid: WyIyZDdlYSIsImJhaWRvb2NsaWZmb3JkNTZAZ21haWwuY29tIiwiOGRjZTJhIl0=
+Received: by fdabad0477bd with HTTP id 681cb7e4c430c1224cb72a6a; Thu, 08 May 2025
+ 13:55:48 GMT
+Sender: learn@itr.mail.codecademy.com
+Date: Thu, 08 May 2025 13:55:48 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="4118f7eb93f00b49e65b45a8ae672de7c3531b5f360f6ba2044301010551"
+Subject: Final hours to save 50% on Pro
+From: Codecademy <learn@itr.mail.codecademy.com>
+To: baidooclifford56@gmail.com
+Reply-To: learn@codecademy.com
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Return-Path: bounces@itr.mail.codecademy.com
+X-Feedback-ID: 17600639:13458873:34640:iterable
+Feedback-ID: 17600639:13458873:34640:iterable
+List-Unsubscribe: <https://links.iterable.com/s/u/bzJ1USSuKNBlp5PMRgfy-7yZ6BtnDLnEkUW_v2QzLTYf70Mu-QQ11oinEOXGZ6wxjMVOkRFTXX8RDwWgEp79uHSmT3c-2n6JcT25U-FBRbQ2w0StCnoTHDJ4OM2oLbGY6BSngSxEQ9BphT25JNSZ-D2q_xu4dx-s-3EB78c4A9VbJjgS8htfRc-Ufj2eq2f-/FTNc9Cae19r-wc5yLG2P4y6zDcJ0Hpdg/8>,<mailto:unsubscribe+13458873+17600639@unsubscribe.iterable.com>
+X-Campaign-ID: 13458873
+X-Message-ID: 5e6abd91f52247808d369bc700507b7c
+X-Mailgun-Variables: {"metadata":
+ "{\"messageId\":\"5e6abd91f52247808d369bc700507b7c\",\"templateId\":17600639,\"projectId\":9044,\"campaignId\":13458873}"}
+Message-Id: <20250508135548.ce389a392e28bb80@itr.mail.codecademy.com>
+
+--4118f7eb93f00b49e65b45a8ae672de7c3531b5f360f6ba2044301010551
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Whew! That was close =E2=80=94 almost missed our flash sale.  =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+
+
+
+
+
+
+
+
+
+
+
+
+FLASH SALE=20
+
+Save 50%=20
+on Pro
+
+
+Our sale ends at midnight! Use promo code MAY25FLASH by 11:59pm ET to save =
+50%=20
+on a year of Codecademy Pro.
+
+
+Join Pro now=20
+<https://www.codecademy.com/checkout?plan_id=3DproGoldAnnualV2&discountCode=
+=3DMAY25FLASH&plan_type=3Dpro&utm_source=3Diterable&utm_medium=3Demail&utm_=
+campaign=3Dmay25_flash&utm_content=3Dfinalhours_cta>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*50% Off offer valid from May 7, 2025 at 12:00:00 am Eastern Time ("ET") an=
+d=20
+ends at 11:59:59 pm ET on May 8, 2025. Discount is only applicable to new=
+=20
+annual subscription plans (excluding Codecademy Plus and Student), and cann=
+ot=20
+be combined with any other offer. Discount applies to the first year of a n=
+ew=20
+subscription, after which the subscription will auto-renew for subsequent y=
+ears=20
+at the regular price. Code valid one time only. Discount applies to certain=
+=20
+products and not all products are available in all countries. Discount is n=
+ot=20
+applicable to taxes. Codecademy reserves the right to modify or cancel this=
+=20
+promotion at any time without notice. Any subscription plan purchases are=
+=20
+subject to Codecademy's Terms of Service=20
+<https://www.codecademy.com/terms?utm_source=3Diterable&utm_medium=3Demail>=
+=2E
+
+
+
+
+
+View Web Version=20
+<https://itr.links.codecademy.com/s/vb/vsLolImB-v4nRWpyhsJfzegex_51a5Hwvg-6=
+4YA0jveYb3PLYIG5Q1soaSvroTDBetQSvA4UHN6IhTZkqkERi4otcgrExWPzprzQTy_6mJsH1aa=
+LTvdskO3DHwfCU_t3O5VQLq6dtIJxvARQe6jl6w/LpqFj8jHfhDSbrgZ-CpKjTUvBM4g0gmL/8>
+ |Email Preferences=20
+<https://www.codecademy.com/account/mail_settings?utm_source=3Diterable&utm=
+_medium=3Demail>
+ |Unsubscribe=20
+<https://itr.links.codecademy.com/s/u/Y_lkawZDf9ozyz4EWLdVgJ-bZn5S5AKl0Jdyz=
+7hrXtfAXTRlmyhYdEduz-VuN-8PY7TKJcoPpGKEZNcIMIWxZS--pESMIE5n7fhUp5_STuwcDtFy=
+71EWSz5LNmwWaOswXJ9Qg75iRCh3DQpAk3mvgWBfBvYI4glEXzaJKQUUxRr4j7dDuG56RcCax6y=
+f-diQ1HrGBZHW0iYXSN9ko_oOcAs63eHZXRQSctGYF6sXlw/aRd_aaY45h13Fz0iF8Ern1FRNIY=
+ktifH/8>
+ |Privacy Policy=20
+<https://www.codecademy.com/policy?utm_source=3Diterable&utm_medium=3Demail=
+>
+
+Copyright Codecademy. All rights reserved.=20
+
+300 Innovative Way, Suite 2210, Nashua, NH 03062
+
+
+--4118f7eb93f00b49e65b45a8ae672de7c3531b5f360f6ba2044301010551
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns=3D"http://www.w3.org/1999/xh=
+tml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micro=
+soft-com:office:office"> <head> <!--[if gte mso 9]><xml> <o:OfficeDocumentS=
+ettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocu=
+mentSettings> </xml><![endif]--> <meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3DUTF-8"> <meta name=3D"HandheldFriendly" content=3D=
+"true"> <meta name=3D"MobileOptimized" content=3D"320"> <meta name=3D"viewp=
+ort" content=3D"width=3Ddevice-width"> <meta name=3D"color-scheme" content=
+=3D"light only"> <meta name=3D"supported-color-schemes" content=3D"light on=
+ly"> <title></title> <!--[if !mso]><!--> <link href=3D"https://www.cdn1ve3z=
+g.com/shared/fonts/SuisseIntlMono/stylesheet.css" rel=3D"stylesheet" type=
+=3D"text/css"> <link href=3D"https://fonts.googleapis.com/css2?family=3DIBM=
++Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;=
+1,300;1,400;1,500;1,600;1,700&amp;display=3Dswap" rel=3D"stylesheet" type=
+=3D"text/css"> <link href=3D"https://www.cdn1ve3zg.com/shared/fonts/Apercu/=
+stylesheet.css" rel=3D"stylesheet" type=3D"text/css"> <link href=3D"https:/=
+/fonts.googleapis.com/css2?family=3DWork+Sans:ital,wght@0,100;0,200;0,300;0=
+,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,70=
+0;1,800;1,900&amp;display=3Dswap" rel=3D"stylesheet" type=3D"text/css"> <!-=
+-<![endif]--> <style type=3D"text/css">span,td,table,div{-webkit-font-smoot=
+hing:antialiased;-moz-osx-font-smoothing:grayscale}.st-email-body{width:100=
+%!important;-webkit-text-size-adjust:100%;margin:0 auto!important;padding:0=
+;background-color:#fff}span.st-preheader{display:none!important}td img+div{=
+display:none}a[href^=3D"tel"],a[href^=3D"sms"]{text-decoration:none;color:i=
+nherit!important;pointer-events:none;cursor:default}u+.st-email-body a{colo=
+r:inherit;text-decoration:none;font-size:inherit;font-family:inherit;font-w=
+eight:inherit;line-height:inherit}*[x-apple-data-detectors]{color:inherit!i=
+mportant;text-decoration:none!important;font-size:inherit!important;font-fa=
+mily:inherit!important;font-weight:inherit!important;line-height:inherit!im=
+portant}a,a:hover,a:link,a:visited{text-decoration:none!important;outline:0=
+}p{margin:0;padding:0}.st-hide-desktop{display:none;font-size:0;height:0;mi=
+n-height:0;max-height:0;line-height:0;mso-hide:all}.st-gmail-fix{display:no=
+ne!important}</style> <style>@media screen and (max-width:480px){.st-col,.s=
+t-mobile-full-width,.st-module-wrapper-table,.st-wrapper,.st-wrapper-table{=
+width:100%!important}.st-col{padding:0!important}.st-resize{width:100%!impo=
+rtant}.st-mobile-width-constraint,.st-resize{display:block!important;height=
+:auto!important}.st-mobile-width-constraint{max-width:100%!important}.st-eq=
+ual-height,.st-height-auto{height:auto!important}.st-hide-desktop{display:t=
+able-row!important}.st-hide-mobile{display:none!important}.st-mobile-inline=
+{display:inline!important}.show-img-mobile{display:table-row!important;widt=
+h:100%!important;float:none;overflow:visible!important;height:auto!importan=
+t}.st-dynamic-394-3{width:100%!important;max-width:102px!important}.st-wrap=
+per-table{width:100%!important;max-width:480px!important;margin:0 auto}}#Me=
+ssageViewBody .st-module-wrapper-table{margin-top:-1px}@media(max-width:649=
+px) and (min-width:481px){.st-module-wrapper-table{margin-top:-1px!importan=
+t}}div>u+.body .st-module-wrapper-table{margin-top:0!important}</style> <!-=
+-[if !mso]><!--> <style>ul,ol{margin-left:15px;padding-left:0}</style> <!--=
+<![endif]--> <!--[if mso]><style>table{border-collapse:collapse}span.MsoHyp=
+erlink{mso-style-priority:99;color:inherit}span.MsoHyperlinkFollowed{mso-st=
+yle-priority:99;color:inherit}ol li,ul li{margin-top:0!important;margin-bot=
+tom:0!important}</style><![endif]--> <!--[if gte mso 9]><style>.st-mso-full=
+-width{width:100%}</style><![endif]--> <!--[if IEMobile]><style type=3D"tex=
+t/css">.st-mso-full-width{width:100%}</style><![endif]--> <!--[if mso]><sty=
+le>.monofont h1,h2,h3,h4,h5,h6,p,a,span,td,strong{font-family:IBM Plex Mono=
+',Helvetica,Arial,sans-serif!important}</style><![endif]--> <!--[if mso]><s=
+tyle>h1,h2,h3,h4,h5,h6,p,a,span,td,strong{font-family:Helvetica,Arial,sans-=
+serif!important}</style><![endif]--> <!--[if mso]><style>.outlook-font-size=
+ a span{font-size:94%!important}</style><![endif]--> <style>.minw-203 a{min=
+-width:167px!important}.minw-228 a{min-width:192px!important}.minw-180 a{mi=
+n-width:144px!important}.minw-60{min-width:60px!important}.minw-33{min-widt=
+h:33px!important}.border-2px-right>table{border-right:solid 2px #10162f!imp=
+ortant}.border-2px-top>table{border-top:2px solid #10162f!important}.border=
+-12px-bottom>table{border-bottom:12px solid #10162f!important}.border-2px-b=
+ottom>table{border-bottom:2px solid #10162f!important}.border-2px-left>tabl=
+e{border-left:2px solid #10162f!important}.border-15px-left>table{border-le=
+ft:14px solid #10162f!important}.lh-36 p{line-height:36px!important}.lh-36 =
+span{line-height:36px!important}.text-align-left span{text-align:left!impor=
+tant}.dark-image{text-align:left!important}.eyebrow-padding span{padding-le=
+ft:14px!important;padding-right:14px!important}.eyebrow-bubble-light{max-wi=
+dth:140px;border:solid 2px #10162f;border-radius:42px;align-content:center}=
+ul{padding-left:15px!important}ul li{list-style-position:outside!important}=
+#MessageViewBody a{color:inherit;text-decoration:none;font-size:inherit;fon=
+t-family:inherit;font-weight:inherit;line-height:inherit}@media(max-width:4=
+80px){.padding-top-12{padding-top:12px!important}.vertical-padding-24{paddi=
+ng-top:24px!important;padding-bottom:24px!important}.padding-sides-22{paddi=
+ng-left:22px!important;padding-right:22px!important}.padding-bottom-56{padd=
+ing-bottom:56px!important}.padding-bottom-15{padding-bottom:15px!important}=
+=2Epadding-bottom-50{padding-bottom:50p=
+x!important}.padding-bottom-24{padding=
+-bottom:24px!important}.padding-top-25{padding-top:25px!important}.padding-=
+top-30{padding-top:30px!important}.padding-top-20{padding-top:20px!importan=
+t}.padding-bottom-32{padding-bottom:32px!important}.padding-sides-32{paddin=
+g-left:32px!important;padding-right:32px!important}.padding-right-32{paddin=
+g-right:32px!important}.padding-left-34{padding-left:34px!important}.paddin=
+g-sides-bgimage .bgi-padding-left{width:22px!important}.padding-sides-bgima=
+ge .bgi-padding-right{width:22px!important}.reset-padding-sides{padding-lef=
+t:0!important;padding-right:0!important}.reset-padding-top{padding-top:0!im=
+portant}.padding-right-44{padding-right:44px!important}.padding-left-42{pad=
+ding-left:42px!important}.padding-right-30{padding-right:30px!important}.pa=
+dding-left-22{padding-left:22px!important}.padding-left-18{padding-left:18p=
+x!important}.padding-right-22{padding-right:22px!important}.center-element =
+td{margin:0 auto!important;text-align:center!important}.center-element{text=
+-align:center!important}.center-element table{margin:0 auto!important}.cent=
+er-element p{text-align:center!important}.center-element span{text-align:ce=
+nter!important}.center-image img{margin:0 auto!important}.left-align p{text=
+-align:left!important}.left-align span{text-align:left!important}.small-fon=
+t-mobile p{font-size:calc(100% - 10px)!important;line-height:1.2!important}=
+=2Esmall-font-mobile p span{font-size:c=
+alc(100% - 10px)!important;line-height=
+:1.2!important}.minw-98{width:98px!important;min-width:98px!important;heigh=
+t:21px!important;max-width:98px!important}.minw-full{width:100%!important;m=
+in-width:100%!important;height:21px!important;max-width:100%!important}.min=
+w-98 img{width:98px!important;min-width:98px!important;height:21px!importan=
+t;max-width:98px!important}.cta-full-width table{width:100%!important}.cta-=
+full-width a{width:320px!important}}</style> <style>@media(prefers-color-sc=
+heme:dark){.light-image{display:none!important}.dark-image{display:block!im=
+portant}.dark-yellow-bttn a{color:#fff!important}}@media(prefers-color-sche=
+me:light){.light-image{display:block!important}.dark-image{display:none!imp=
+ortant}}[data-ogsc] .dark-image{display:block!important}[data-ogsb] .dark-i=
+mage{display:block!important}[data-ogsc] .light-image{display:none!importan=
+t}[data-ogsb] .light-image{display:none!important}[data-ogsc] .dark-yellow-=
+bttn a{color:#fff!important}[data-ogsb] .dark-yellow-bttn a{color:#fff!impo=
+rtant}</style> </head> <body class=3D"st-email-body st-center-gmail" style=
+=3D"-webkit-text-size-adjust: 100%; padding: 0px; background-color: #ffffff=
+; width: 100% !important; margin: 0 auto!important;"><span style=3D"color:t=
+ransparent;visibility:hidden;display:none;opacity:0;height:0;width:0;font-s=
+ize:0;">Whew! That was close =E2=80=94 almost missed our flash sale.=E2=80=
+=8B</span><img src=3D"https://itr.links.codecademy.com/s/eo/T4hp6p1Sg2a7Z-l=
+VquKY7T-Pwev9Wsez2G02EIwI4SFF8l8__mUDYFd2PWX_4fDWeCiQFKjfLPDdp2Lo3KPNlcGX3Y=
+SV4zzDnWKjT7TFKN2q5advGlsqYX0WGsBWXEVEy4Jjl6N7C9xJBWb6SVJJVhxH1Xkw96QAmJvxY=
+1LPoq7V01LbuOklfbEkp9OTI29NG21YGyxXgDjPJaOmnD9n/CdZD1tro1RAXANdHDRaSLC_Hddj=
+ppRCB/8" style=3D"border:0;width:1px;height:1px;border-width:0px!important;=
+display:none!important;line-height:0!important;" width=3D"1" height=3D"1"/>=
+ <div style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale; font-size: 0px; display: none; visibility: hidden; opacity: 0;=
+ color: transparent; max-height: 0px; height: 0; width: 0; mso-hide: all;">=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &=
+#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199=
+;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#84=
+7; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#=
+8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &=
+#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199=
+;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#84=
+7; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#=
+8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &s=
+hy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;=
+ &shy; &shy; &shy; &shy; &shy; &nbsp; </div> <table role=3D"presentation" w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#=
+FFFFFF" class=3D"st-wrapper-table" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; width: 100%;"> <tr> <td width=3D"=
+100%" valign=3D"top" align=3D"center" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale;"> <table role=3D"presentation"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" width=3D=
+"650" class=3D"st-wrapper st-wrapper-background st-module-wrapper-table" st=
+yle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; width: 650px;"> <tr> <td width=3D"100%" bgcolor=3D"#10162F" valign=3D"=
+top" class=3D"padding-sides-22 vertical-padding-24" style=3D"-webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%; pad=
+ding: 21px 60px 20px;"> <table role=3D"presentation" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" width=3D"530" class=3D"st-mso-full-width st-mobi=
+le-full-width" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale; width: 530px;"> <tr> <td align=3D"center" valign=3D"t=
+op" width=3D"530" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale;"> <table width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale;"> <tr> <td width=3D"1=
+00%" valign=3D"top" align=3D"left" class=3D"st-dynamic-394-3" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width:=
+ 100%;"><img border=3D"0" valign=3D"top" width=3D"102" src=3D"https://www.c=
+dn1ve3zg.com/uyfmc039xp/en_us/images/67e229331f8c5-1742874931.1292.png" alt=
+ title class=3D"st-mobile-width-constraint" style=3D"border: 0px; display: =
+block; width: 102px; max-width: 100%;"> </td> </tr> </table> </td> </tr> </=
+table> </td> </tr> </table> </td> </tr> <tr> <td width=3D"100%" valign=3D"t=
+op" align=3D"center" style=3D"-webkit-font-smoothing: antialiased; -moz-osx=
+-font-smoothing: grayscale;"> <table role=3D"presentation" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" align=3D"center" width=3D"650" class=3D"st=
+-wrapper st-wrapper-background st-module-wrapper-table" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650px=
+;"> <tr> <td width=3D"100%" bgcolor=3D"#3A10E5" valign=3D"top" class=3D"pad=
+ding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale; width: 100%; padding-right: 60px; padding-left: 60px;=
+"> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-font-smoothing: ant=
+ialiased; -moz-osx-font-smoothing: grayscale; width: 100%;"> <tr> <td width=
+=3D"100%" valign=3D"top" align=3D"left" style=3D"-webkit-font-smoothing: an=
+tialiased; -moz-osx-font-smoothing: grayscale;"> <table role=3D"presentatio=
+n" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"530" class=3D"=
+st-mso-full-width st-mobile-full-width" style=3D"-webkit-font-smoothing: an=
+tialiased; -moz-osx-font-smoothing: grayscale; width: 530px;"> <tr> <td ali=
+gn=3D"center" valign=3D"top" width=3D"530" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale;"> <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+;"> <tr> <td width=3D"100%" valign=3D"top" align=3D"center" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 1=
+00%;"> <p height=3D"40" width=3D"100%" style=3D"padding: 0; mso-line-height=
+-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-size-adj=
+ust: 100%; width: 100%; height: 40px; max-height: 40px; margin: 0px; font-s=
+ize: 40px; line-height: 40px;"> &nbsp; </p> </td> </tr> <tr> <td width=3D"1=
+00%" valign=3D"top" align=3D"left" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; padding-bottom: 8px; width: 100%;=
+"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:23pt; v-text-a=
+nchor:middle; width:91pt; mso-position-horizontal: left" arcsize=3D"139%" s=
+trokecolor=3D"#FFFFFF" strokeweight=3D"2pt" fillcolor=3D"none"> <w:anchorlo=
+ck/> <v:textbox inset=3D"0,0,0,0"><p style=3D"text-align: center; font-fami=
+ly: Suisse Int\l Mono, IBM Plex Mono, Helvetica, Sans-serif; color: #FFFFFF=
+; font-size: 14px; font-weight: bold; letter-spacing: normal; mso-line-heig=
+ht-rule: exactly; line-height: 14px"><![endif]--> <!--[if !mso]><!--> <tabl=
+e role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; border-collapse: initial;"> <tr> <td width=3D"100%" align=3D"center" h=
+eight=3D"28" valign=3D"middle" style=3D"-webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; mso-padding-alt: 0px 16px 0px 16px; b=
+order-radius: 42px; border-width: 2px; border-style: solid; border-color: #=
+ffffff; height: 28px; width: 100%; text-align: center; vertical-align: midd=
+le;"><!--<![endif]--> <valign=3D"middle" style=3D"mso-line-height-rule:exac=
+tly; text-align:center; font-family: 'Suisse Intl Mono', 'IBM Plex Mono', H=
+elvetica, sans-serif; color: #ffffff; font-size: 14px; font-weight: bold; l=
+etter-spacing: normal; line-height: 14px; text-decoration: none; display: t=
+able-cell; height: 28px; border-radius: 42px; vertical-align: middle; box-s=
+izing: content-box"> <span style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale; color: #ffffff; padding-right: 16px; padd=
+ing-left: 16px; margin: 0px;"><span style=3D"-webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 14=
+px;">FLASH SALE</span></span> <!--[if !mso]><!--></valign=3D"middle"></td> =
+</tr> </table> <!--<![endif]--> <!--[if mso]></p></v:textbox> </v:roundrect=
+><![endif]--> </td> </tr> <tr> <td width=3D"100%" valign=3D"top" align=3D"l=
+eft" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale; text-align: left; font-family: 'Apercu Pro', 'Work Sans', Helve=
+tica, Arial, sans-serif; color: #ffffff; font-size: 82px; font-weight: 600;=
+ letter-spacing: normal; line-height: 88px; padding-bottom: 16px; width: 10=
+0%;"> <p style=3D"padding: 0; text-align: left; margin: 0px;"><span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; font-size: 82px; line-height: 88x;">Save 50% <br>on Pro</span></p> </td> =
+</tr> <tr> <td width=3D"100%" valign=3D"top" align=3D"left" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-ali=
+gn: left; font-family: 'Apercu Pro', 'Work Sans', Helvetica, Arial, sans-se=
+rif; color: #ffffff; font-size: 16px; font-weight: normal; letter-spacing: =
+normal; line-height: 24px; width: 100%;"> <p style=3D"padding: 0; margin: 0=
+px;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; font-size: 16px; line-height: 24px;">Our sale ends at mid=
+night! Use promo code <span style=3D"-webkit-font-smoothing: antialiased; -=
+moz-osx-font-smoothing: grayscale; background-color: #ffffff;"><strong><spa=
+n style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; color: #3a10e5;">MAY25FLASH</span></strong></span> by 11:59pm ET t=
+o save 50% on a year of Codecademy Pro.</span></p> </td> </tr> <tr> <td wid=
+th=3D"100%" valign=3D"top" align=3D"left" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; padding-top: 24px; width: =
+100%;"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:27pt; v-t=
+ext-anchor:middle; width:99pt; mso-position-horizontal: left" arcsize=3D"7%=
+" strokecolor=3D"#FFD300" strokeweight=3D"0pt" fillcolor=3D"#FFD300"> <w:an=
+chorlock/> <v:textbox inset=3D"0,0,0,0"><p style=3D"text-align: center; fon=
+t-family: Apercu Pro, Work Sans, Helvetica, Sans-serif; color: #10162F; fon=
+t-size: 16px; font-weight: 600; letter-spacing: normal; mso-line-height-rul=
+e: exactly; line-height: 18px"><![endif]--> <!--[if !mso]><!--> <table role=
+=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; b=
+order-collapse: initial;"> <tr> <td width=3D"100%" bgcolor=3D"#ffd300" alig=
+n=3D"center" height=3D"36" valign=3D"middle" style=3D"-webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale; mso-padding-alt: 0px 16=
+px 0px 16px; border-radius: 2px; height: 36px; width: 100%; text-align: cen=
+ter; background-color: #ffd300; vertical-align: middle;"><!--<![endif]--> <=
+a href=3D"https://itr.links.codecademy.com/s/c/MZutNsGzNzD_T44RU7iZN6OhYhtU=
+yJUlwgnnOWOasNLzdpcftRI3BLnV6KB8jqze-HhQ5inz0XjTnFC1GcSMhb_eMhlsp2Sj67dIDgX=
+MrUUmw5NOpFQBOS9xo9eVG2CwScEaesGuhrMX9xXShJ9VxtwqN0F11GmSwE_fkLWsi6g8MbO0Wv=
+TCjryYv3CU7G4mGhTrNrhA_UnZlRc1oRprI1M5OcDEShs8bM51QbdI7Yd2HF5H0Vvbssv85hP67=
+0kFNQVEyYTnOKA-PQjgKRfK-7YeWFQWKSXkyfypzRzqBCTERmMw4ZlsP_FzG_Wa1KcNUESSSTmk=
+_x4lYIa2LFPfCTbmsyxLfjk97QU0ezOfXuJAhxEfnNO-qOZJbDly6qvUhdW1a_DHiyPdfq30NHI=
+E-jqJ6poGppxyWswuei8JEI6_EmxKMqKq5x0C3opSR2WBSWe2F09ouadW_mkwunvdSVLVQqWClI=
+wKxxA-/ANwzpwXTy4pnRo0qUCRuLg_phLGEm4WX/8" target=3D"_blank" bgcolor=3D"#FF=
+D300" valign=3D"middle" style=3D"outline: none; mso-line-height-rule: exact=
+ly; text-align: center; font-family: 'Apercu Pro', 'Work Sans', Helvetica, =
+sans-serif; color: #10162f; font-size: 16px; font-weight: 600; letter-spaci=
+ng: normal; line-height: 24px; padding-right: 16px; padding-left: 16px; dis=
+play: table-cell; height: 36px; border-radius: 2px; vertical-align: middle;=
+ box-sizing: content-box; text-decoration: none !important;"> <span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; color: #10162f; margin: 0px;"><span style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale; font-size: 16px; line-height: =
+24px;">Join Pro now</span></span></a> <!--[if !mso]><!--></td> </tr> </tabl=
+e> <!--<![endif]--> <!--[if mso]></p></v:textbox> </v:roundrect><![endif]--=
+> </td> </tr> <tr> <td width=3D"100%" valign=3D"top" align=3D"center" style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; width: 100%;"> <p height=3D"40" width=3D"100%" style=3D"padding: 0; mso-l=
+ine-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; tex=
+t-size-adjust: 100%; width: 100%; height: 40px; max-height: 40px; margin: 0=
+px; font-size: 40px; line-height: 40px;"> &nbsp; </p> </td> </tr> </table> =
+</td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> =
+<tr> <td width=3D"100%" valign=3D"top" align=3D"center" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"> <table rol=
+e=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"center" width=3D"650" class=3D"st-wrapper st-wrapper-background st-modu=
+le-wrapper-table" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 650px;"> <tr> <td width=3D"100%" bgcolor=3D=
+"#FFFFFF" valign=3D"top" style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale; width: 100%;"> <table role=3D"presentation"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"650" class=3D"st=
+-mso-full-width st-mobile-full-width" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale; width: 650px;"> <tr> <td align=
+=3D"center" valign=3D"top" width=3D"650" style=3D"-webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale;"> <table width=3D"100%" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+;"> <tr> <td width=3D"100%" valign=3D"top" align=3D"center" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding:=
+ 0px; width: 100%;"> <p height=3D"48" width=3D"100%" style=3D"padding: 0; m=
+so-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ text-size-adjust: 100%; width: 100%; height: 48px; max-height: 48px; margi=
+n: 0px; font-size: 48px; line-height: 48px;"> &nbsp; </p> </td> </tr> </tab=
+le> </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td width=3D=
+"100%" valign=3D"top" align=3D"center" style=3D"-webkit-font-smoothing: ant=
+ialiased; -moz-osx-font-smoothing: grayscale;"> <table role=3D"presentation=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" width=
+=3D"650" class=3D"st-wrapper st-wrapper-background st-module-wrapper-table"=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; width: 650px;"> <tr> <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=
+=3D"top" class=3D"padding-sides-22" style=3D"-webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; width: 100%; padding-right: 60px=
+; padding-left: 60px;"> <table role=3D"presentation" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 10=
+0%;"> <tr> <td width=3D"100%" valign=3D"top" align=3D"left" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"> <table=
+ role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" wid=
+th=3D"530" class=3D"st-mso-full-width st-mobile-full-width" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 5=
+30px;"> <tr> <td align=3D"center" valign=3D"top" width=3D"530" style=3D"-we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"> <ta=
+ble width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale;"> <tr> <td width=3D"100%" valign=3D"top" align=3D"lef=
+t" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-align: left; font-family: 'Apercu Pro', 'Work Sans', Helveti=
+ca, Arial, sans-serif; color: #737373; font-size: 12px; font-weight: normal=
+; letter-spacing: normal; line-height: 18px; padding-top: 24px; padding-bot=
+tom: 24px; width: 100%;"> <p style=3D"padding: 0; margin: 0px;">*50% Off of=
+fer valid from May 7, 2025 at 12:00:00 am Eastern Time ("ET") and ends at 1=
+1:59:59 pm ET on May 8, 2025. Discount is only applicable to new annual sub=
+scription plans (excluding Codecademy Plus and Student), and cannot be comb=
+ined with any other offer. Discount applies to the first year of a new subs=
+cription, after which the subscription will auto-renew for subsequent years=
+ at the regular price. Code valid one time only. Discount applies to certai=
+n products and not all products are available in all countries. Discount is=
+ not applicable to taxes. Codecademy reserves the right to modify or cancel=
+ this promotion at any time without notice. Any subscription plan purchases=
+ are subject to Codecademy's<span style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; font-size: 12px; line-height: 18px=
+;"> <span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale; color: #737373;"><a style=3D"outline: none; color: #737373=
+; text-decoration: none !important;" href=3D"https://itr.links.codecademy.c=
+om/s/c/zjTbi0TcHmY4tSNiYeg5tkJr2IV7WpsA731l_Td6ZEI0r7zHjBAF3ywFTs0naB40q9Xr=
+x_bZkye6A0pOaze4bkupX0Ej9j0kpUYZwwUjQ7vY4NHyRqWaaVTcz1AMgr0feeylb6BnjFBOYzL=
+R5Z6sl2X0Q-WyVP3-o60aiwjuBobDsgvXhYXZ73Ft7cSkXLIVCG1ffK5EkcKVCZgUdj_YChZ2vx=
+j_dprB_cbNEbJBrBLWWooSCY-A6kB9BynnDUlsJGbo4qVhBmwyByT_G1vOgsmgTBKFjWTT7Iw-1=
+q4_fDBEyhfCBwYwgN0VQMKIOKxfONGOKWjf/He-V3xfnElKK0U2YQaxerrw6x1IUZkpO/8"><u>=
+Terms of Service</u></a></span><span style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale; color: #5c5c5c;">.</span></span=
+></p> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> =
+</tr> </table> </td> </tr> <tr> <td width=3D"100%" valign=3D"top" align=3D"=
+center" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothi=
+ng: grayscale;"> <table role=3D"presentation" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" align=3D"center" width=3D"650" class=3D"st-wrapper st-w=
+rapper-background st-module-wrapper-table" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; width: 650px;"> <tr> <td =
+width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"padding-sides-22=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 100%; padding: 72px 90px;"> <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"470" class=3D"st-ms=
+o-full-width st-mobile-full-width" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; width: 470px;"> <tr> <td align=3D=
+"center" valign=3D"top" width=3D"470" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale;"> <table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"> <=
+tr> <td width=3D"100%" valign=3D"top" align=3D"left" style=3D"-webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: lef=
+t; font-family: 'Apercu Pro', 'Work Sans', Helvetica, Arial, sans-serif; co=
+lor: #000000; font-size: 14px; font-weight: normal; letter-spacing: normal;=
+ line-height: 24px; width: 100%;"> <p style=3D"padding: 0; margin: 0px; tex=
+t-align: center;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; font-size: 14px; line-height: 24px;"><a clas=
+s=3D" st-no-tracking" style=3D"outline: none; color: #000000; text-decorati=
+on: none !important;" href=3D"https://itr.links.codecademy.com/s/vb/vsLolIm=
+B-v4nRWpyhsJfzegex_51a5Hwvg-64YA0jveYb3PLYIG5Q1soaSvroTDBetQSvA4UHN6IhTZkqk=
+ERi4otcgrExWPzprzQTy_6mJsH1aaLTvdskO3DHwfCU_t3O5VQLq6dtIJxvARQe6jl6w/LpqFj8=
+jHfhDSbrgZ-CpKjTUvBM4g0gmL/8" data-mce-selected=3D"inline-boundary"><span s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; color: #000000;">View Web Version</span></a> | <a style=3D"outline: n=
+one; color: #000000; text-decoration: none !important;" href=3D"https://itr=
+=2Elinks.codecademy.com/s/c/g6SKlEPt_rb=
+JgmcvrVmZ-kADfnKqMsC3jwBku_gi9M44mBfe-=
+vSVqA3yjWYWJ61D5P0-rI3WBKWsB9WobVPsSuij8QoaXhdePpkQnbwgGUjhSd2UKUdrqMFQ2zaF=
+x_u2QEg5pzWgj66muB-B1VpuSvSinYn63ofCkEV97QA88A_BwT5-yntwG39lL-jYLgBPogp0WRL=
+3q1wvTG77_5Le6nyjMwL8qySyRevX1k5OWH3UFNos_XQ-7jJ3oxnkeAPGmscwPNjV1w4V5wtwkr=
+NNepWnoZOntw-HrAk-D95aj51zDLuBzWnklhegoCW4v5Fn1nwcQlZupF3DNmP1FrLqG-UfB80c4=
+Q/AlTRc4OdnVblzamJwL7zuOr9cKpEhFTi/8"><span style=3D"-webkit-font-smoothing=
+: antialiased; -moz-osx-font-smoothing: grayscale; color: #000000;">Email P=
+references</span></a> | <a class=3D" st-no-tracking" style=3D"outline: none=
+; color: #000000; text-decoration: none !important;" href=3D"https://itr.li=
+nks.codecademy.com/s/u/Y_lkawZDf9ozyz4EWLdVgJ-bZn5S5AKl0Jdyz7hrXtfAXTRlmyhY=
+dEduz-VuN-8PY7TKJcoPpGKEZNcIMIWxZS--pESMIE5n7fhUp5_STuwcDtFy71EWSz5LNmwWaOs=
+wXJ9Qg75iRCh3DQpAk3mvgWBfBvYI4glEXzaJKQUUxRr4j7dDuG56RcCax6yf-diQ1HrGBZHW0i=
+YXSN9ko_oOcAs63eHZXRQSctGYF6sXlw/aRd_aaY45h13Fz0iF8Ern1FRNIYktifH/8"><span =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale; color: #000000;">Unsubscribe</span></a> | <a style=3D"outline: none;=
+ color: #000000; text-decoration: none !important;" href=3D"https://itr.lin=
+ks.codecademy.com/s/c/h4t9zWSI9m7egdqxKv-jp07IF1z0SsyQucZcK0CF6zSHVsKp8vJYs=
+xfxrPrMUkRRgwPLNEqEFlFgtA7goYtRpm9WPIrMLccQr6oGZAzUgRO7H75mG7XCtEAKBEMd_Hqg=
+NmElcFl0wH7Skjh7DLH6zGPC6XQFR4NFuSRxFecmm3-mxfrWLG6oEAicPaT0OLcKdrP-T5MHv2S=
+JheCNnQKwYedxpGuh6xo1JibbeULUOuN9ALU-N-pOY1JRasAdvrpl6kKQtoqLhnr4Ti3ZomVGDe=
+KGtfCItzVv93Jw2GBWLYjptiTefWS9g4x7YlMqoeoRR0mzGRWyOw/Fs1TZZGCb8oatskqfLLbLz=
+S0rbuLk5Rh/8"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale; color: #000000;">Privacy Policy</span></a></span=
+></p> <p style=3D"padding: 0; margin: 0px; text-align: center;"><span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; font-size: 14px; line-height: 24px;">Copyright Codecademy. All rights res=
+erved. </span></p> <p style=3D"padding: 0; margin: 0px; text-align: center;=
+"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothi=
+ng: grayscale; font-size: 14px; line-height: 24px;">300 Innovative Way, Sui=
+te 2210, Nashua, NH 03062</span></p> </td> </tr> </table> </td> </tr> </tab=
+le> </td> </tr> </table> </td> </tr><!--[if false]><!--> <tr> <td class=3D"=
+st-gmail-fix" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; background-color: #FFFFFF; font-size: 0; line-height: =
+0; height: 0; min-width: 650px; display: none !important;" bgcolor=3D"#FFFF=
+FF"> &nbsp; </td> </tr><!--<![endif]--> </table> <img width=3D"1" height=3D=
+"1" alt=3D"" src=3D"http://mg.itr.mail.codecademy.com/o/eJw8z01OxDAMxfHTpMv=
+KdeI4WWTBx4ZjuLY7FE1o1amQuD1CA7P-vf_iWSumjjJ4mzhlnpBSHd6bE2itZolMFuWCPHmNxp=
+ZhwbTgsDYEJCAoUyRKZVSPpUqs6FjmuUBIsJ7H2GW9jrqZq5j371G3PnQ_xeSUFvg5IHa_3eTib=
+xYQQ3wKiORZZqvTQoiJCxSLuc7KAAQ8s_4O8SUgnt73q5yPduIMkGO9635sH67nP1ZI6Q4qfZf1=
+8vnIYqJSOAZ-HY42y2rbptd1WbbDKIcEl78bffhq-BMAAP__s05W1g"></body> </html>
+--4118f7eb93f00b49e65b45a8ae672de7c3531b5f360f6ba2044301010551--
